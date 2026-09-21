@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مبلمان ال‌آرا | کرج</title>
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+:root{
+  --bg: oklch(16% 0.012 60);
+  --surface: oklch(21% 0.015 60);
+  --text: oklch(88% 0.01 60);
+  --muted: oklch(52% 0.01 60);
+  --accent: oklch(72% 0.13 70);
+  --sp: 1rem;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: Vazirmatn, Tahoma, sans-serif;
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+a{color:inherit;text-decoration:none}
+section{padding: calc(var(--sp)*6) calc(var(--sp)*2)}
+h2{font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: calc(var(--sp)*2); color: var(--accent)}
+h3{margin-bottom:.4rem}
+.wrap{max-width:1100px;margin:0 auto}
+
+/* ---------- Hero ---------- */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+#hero-canvas{position:absolute;inset:0;z-index:0}
+.hero-content{position:relative;z-index:2}
+.badge{
+  display:inline-block;padding:.35rem 1rem;border:1px solid var(--accent);
+  border-radius:999px;font-size:.85rem;color:var(--accent);
+  background:rgba(0,0,0,.25);margin-bottom:1rem;
+}
+h1{font-size:clamp(3rem,10vw,6rem);letter-spacing:.02em;margin-bottom:.5rem}
+.tagline{color:var(--muted);font-size:1.1rem}
+.scroll-hint{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.8rem;z-index:2}
+
+/* ---------- Glass cards ---------- */
+.glass-card{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 18px;
+  padding: calc(var(--sp)*2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform .35s ease, border-color .35s ease;
+}
+.glass-card:hover{transform: translateY(-6px); border-color: var(--accent)}
+.glass-card .icon{
+  width:64px;height:64px;font-size:2rem;display:flex;align-items:center;justify-content:center;
+  border-radius:14px;background:rgba(255,255,255,.06);margin-bottom:1rem;
+}
+.glass-card p{color:var(--muted);font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:calc(var(--sp)*2)}
+
+/* ---------- Showcase ---------- */
+#showcase{position:relative;min-height:150vh}
+#sofa-canvas{position:sticky;top:0;height:100vh;display:block}
+.showcase-text{position:relative;z-index:2;max-width:520px;margin-top:-60vh}
+
+/* ---------- Contact ---------- */
+.contact-list{display:flex;flex-direction:column;gap:1rem}
+.contact-list a{
+  display:flex;gap:.7rem;align-items:center;padding:.7rem 1rem;border-radius:12px;
+  background:rgba(255,255,255,.04);transition:background .3s;
+}
+.contact-list a:hover{background:rgba(255,255,255,.09)}
+.form-note{
+  margin-top: calc(var(--sp)*4);
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+footer{
+  text-align:center;
+  padding: calc(var(--sp)*3);
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,.08);
+  font-size: .9rem;
+}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(40px)}
+</style>
+</head>
+<body>
+
+<header id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <span class="badge">مبلمان ال‌آرا | کرج</span>
+    <h1>ال‌آرا</h1>
+    <p class="tagline">طراحی و ساخت مبلمان مدرن — چوب، پارچه، هنر</p>
+  </div>
+  <div class="scroll-hint">↓ اسکرول کنید</div>
+</header>
+
+<main>
+<section id="services">
+  <div class="wrap">
+    <h2>خدمات ما</h2>
+    <div class="grid">
+      <div class="glass-card reveal">
+        <div class="icon">🛋️</div>
+        <h3>طراحی مبلمان</h3>
+        <p>طراحی مبل و دکوراسیون متناسب با فضای شما.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="icon">🪵</div>
+        <h3>چوب‌کاری</h3>
+        <p>ساخت قاب و سازه با چوب درجه‌یک و اجرای دقیق.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="icon">🧵</div>
+        <h3>رویه‌دوزی</h3>
+        <p>رویه‌دوزی حرفه‌ای با پارچه‌های درجه‌یک و رنگ‌بندی متنوع.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="icon">🕐</div>
+        <h3>تحویل سریع</h3>
+        <p>تحویل به‌موقع در کرج و حومه.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="showcase">
+  <canvas id="sofa-canvas"></canvas>
+  <div class="showcase-text">
+    <div class="glass-card reveal">
+      <h2 style="margin-bottom:.5rem">نمونه‌کار سه‌بعدی</h2>
+      <p>با اسکرول کردن، دوربین به مبل نزدیک می‌شود — ساخته‌شده با Three.js و GSAP.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>تماس با ما</h2>
+    <div class="glass-card reveal">
+      <div class="contact-list">
+        <a href="https://www.google.com/maps?q=Karaj,+Iran" target="_blank" rel="noopener">📍 نشانی: کرج، ایران</a>
+        <a href="https://neshan.org/maps" target="_blank" rel="noopener">🗺️ مسیریابی با نقشه نشان</a>
+        <a href="tel:+982612345678">☎️ ۰۲۶-۱۲۳۴۵۶۷۸</a>
+        <a href="tel:+989125579286">📱 ۰۹۱۲98۵۵۷۹۲۸۶</a>
+        <a href="https://wa.me/989125579286" target="_blank" rel="noopener">💬 واتساپ: ۰۹۱۲-۵۵۷۹۲۸۶</a>
+        <a href="https://instagram.com/lara.furniture" target="_blank" rel="noopener">📷 اینستاگرام: lara.furniture</a>
+      </div>
+      <p class="form-note">برای مشاورهٔ رایگان و سفارش اختصاصی، از طریق واتساپ یا تلفن در تماس باشید. پاسخگویی: شنبه تا پنجشنبه، ۹ تا ۱۹.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© ۱۴۰۵ مبلمان ال‌آرا — کرج</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+// ---------- GSAP ScrollTrigger reveals ----------
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll('.reveal').forEach(function(el){
+  gsap.to(el, {
+    opacity: 1, y: 0, duration: 1, ease: 'power2.out',
+    scrollTrigger: { trigger: el, start: 'top 85%' }
+  });
+});
+
+// ---------- Hero: floating planks ----------
+(function(){
+  const canvas = document.getElementById('hero-canvas');
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 100);
+  cam.position.z = 9;
+  const r = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  r.setPixelRatio(Math.min(devicePixelRatio, 2));
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+  const key = new THREE.DirectionalLight(0xffcc88, 0.9);
+  key.position.set(4, 6, 6);
+  scene.add(key);
+
+  const mats = [
+    new THREE.MeshStandardMaterial({ color: 0x8a5a33, roughness: 0.7 }),
+    new THREE.MeshStandardMaterial({ color: 0xc49a6c, roughness: 0.6 }),
+    new THREE.MeshStandardMaterial({ color: 0x4a3325, roughness: 0.8 })
+  ];
+  const planks = [];
+  for (let i = 0; i < 40; i++) {
+    const m = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), mats[i % mats.length]);
+    const sx = 0.5 + Math.random() * 1.4;
+    m.scale.set(sx, sx * (0.08 + Math.random() * 0.25), sx * (0.15 + Math.random() * 0.6));
+    m.position.set((Math.random() - 0.5) * 22, (Math.random() - 0.5) * 14, (Math.random() - 0.5) * 10);
+    m.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+    m.userData.sp = 0.15 + Math.random() * 0.4;
+    scene.add(m);
+    planks.push(m);
+  }
+
+  function resize(){
+    const w = innerWidth, h = innerHeight;
+    r.setSize(w, h, false);
+    cam.aspect = w / h;
+    cam.updateProjectionMatrix();
+  }
+  addEventListener('resize', resize);
+  resize();
+
+  const clock = new THREE.Clock();
+  (function loop(){
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    planks.forEach(function(p){
+      p.rotation.x += 0.002 * p.userData.sp;
+      p.rotation.y += 0.003 * p.userData.sp;
+      p.position.y += Math.sin(t + p.position.x) * 0.002;
+    });
+    r.render(scene, cam);
+  })();
+})();
+
+// ---------- Showcase: wireframe sofa with scroll-driven camera zoom ----------
+(function(){
+  const canvas = document.getElementById('sofa-canvas');
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 100);
+  cam.position.set(0, 1.6, 7);
+  const r = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  r.setPixelRatio(Math.min(devicePixelRatio, 2));
+
+  const mat = new THREE.LineBasicMaterial({ color: 0xd9a066 });
+  const sofa = new THREE.Group();
+  function part(w, h, d, x, y, z){
+    const mesh = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(w, h, d)), mat);
+    mesh.position.set(x, y, z);
+    sofa.add(mesh);
+  }
+  part(4, 0.5, 1.6, 0, 0.3, 0);     // base
+  part(4, 1.2, 0.35, 0, 1.1, -0.6); // back
+  part(1, 0.6, 1.4, -1.5, 0.85, 0.05); // arm right
+  part(1, 0.6, 1.4, 1.5, 0.85, 0.05);  // arm left
+  part(1.6, 0.3, 1.3, -0.8, 0.7, 0.05); // cushion right
+  part(1.6, 0.3, 1.3, 0.8, 0.7, 0.05);  // cushion left
+  sofa.position.y = -0.8;
+  scene.add(sofa);
+
+  function resize(){
+    const w = innerWidth, h = innerHeight;
+    r.setSize(w, h, false);
+    cam.aspect = w / h;
+    cam.updateProjectionMatrix();
+  }
+  addEventListener('resize', resize);
+  resize();
+
+  gsap.to(cam.position, {
+    z: 3.2, y: 0.6, ease: 'none',
+    scrollTrigger: { trigger: '#showcase', start: 'top top', end: 'bottom bottom', scrub: true }
+  });
+
+  (function loop(){
+    requestAnimationFrame(loop);
+    sofa.rotation.y += 0.004;
+    r.render(scene, cam);
+  })();
+})();
+</script>
+</body>
+</html>
